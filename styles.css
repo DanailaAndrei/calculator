@@ -1,8 +1,8 @@
-body, .mainDiv, .clear, .container, .numbers, .operators, .digit, .operator, .ac {
+body, .mainDiv, .display, .clear, .container, .numbers, .operators, .digit, .operator, .ac {
     display: flex;
 }
 
-body, .digit, .operator, .ac {
+body, .display, .digit, .operator, .ac {
     justify-content: center;
     align-items: center;
 }
@@ -12,11 +12,11 @@ body, .digit, .operator, .ac {
     border-radius: 15px;
 }
 
-.mainDiv, .clear {
+.mainDiv, .display, .clear {
     justify-content: end;
 }
 
-.digit, .operator, .ac {
+.display, .digit, .operator, .ac {
     box-sizing: border-box;
     font-size: 4em; 
 }
@@ -43,6 +43,18 @@ html, body, .numbers, .operators, .ac {
 
 .mainDiv, .digit {
     width: 33%;
+}
+
+.digit, .operator, .ac{
+    cursor: pointer;
+}
+
+.digit:hover, .operator:hover, .ac:hover{
+    background-color: lightgray;
+}
+
+.digit:active, .operator:active, .ac:active{
+    background-color: gray;
 }
 
 html, body {
