@@ -1,88 +1,73 @@
-body {
+body, .mainDiv, .clear, .container, .numbers, .operators, .digit, .operator, .ac {
     display: flex;
+}
+
+body, .digit, .operator, .ac {
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+}
+
+.display, .digit, .operator, .ac {
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.mainDiv, .clear {
+    justify-content: end;
+}
+
+.digit, .operator, .ac {
+    box-sizing: border-box;
+    font-size: 4em; 
+}
+
+html, body, .display, .clear, .container, .operator {
+    width: 100%;
+}
+
+.operators, .ac {
+    width: 25%;
+}
+
+.display, .clear {
+    height: 15%;
+}
+
+html, body, .numbers, .operators, .ac {
+    height: 100%;
+}
+
+.digit, .operator {
+    height: 25%;
+}
+
+.mainDiv, .digit {
+    width: 33%;
+}
+
+html, body {
     padding: 0;
     margin: 0;
 }
 
 .mainDiv {
     height: 90%;
-    width: 30%;
-    display: flex;
     flex-direction: column;
-    justify-content: end;
 }
 
 .display {
-    border: 1px solid blue;
-    border-radius: 15px;
-    width: 100%;
-    height: 15%;
     margin-bottom: 1%;
 }
 
-.clear {
-    width: 100%;
-    height: 15%;
-    display: flex;
-    justify-content: end;
-}
-
 .container {
-    width: 100%;
     height: 60%;
-    display: flex;
 }
 
 .numbers {
     width: 75%;
-    height: 100%;
-    display: flex;
     flex-wrap: wrap-reverse;
 }
 
 .operators {
-    width: 25%;
-    height: 100%;
-    display: flex;
     flex-wrap: wrap;
-}
-
-.digit {
-    width: 33%; 
-    height: 25%; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    font-size: 4em; 
-    border: 1px solid black;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-.operator {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    width: 100%;
-    height: 25%;
-    font-size: 4em;
-    border: 1px solid black;
-    box-sizing: border-box;
-    border-radius: 15px;
-}
-
-.ac {
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    width: 25%;
-    height: 100%;
-    font-size: 4em;
-    border: 1px solid black;
-    box-sizing: border-box;
-    border-radius: 15px;
 }
