@@ -9,21 +9,22 @@ body {
 }
 
 .mainDiv {
-    border: 2px solid brown;
     height: 90%;
     width: 30%;
     display: flex;
     flex-direction: column;
+    justify-content: end;
 }
 
 .display {
     border: 1px solid blue;
+    border-radius: 15px;
     width: 100%;
-    height: 25%;
+    height: 15%;
+    margin-bottom: 1%;
 }
 
 .clear {
-    border: 1px solid red;
     width: 100%;
     height: 15%;
     display: flex;
@@ -37,7 +38,6 @@ body {
 }
 
 .numbers {
-    border: 1px solid green;
     width: 75%;
     height: 100%;
     display: flex;
@@ -45,7 +45,6 @@ body {
 }
 
 .operators {
-    border: 1px solid violet;
     width: 25%;
     height: 100%;
     display: flex;
@@ -58,7 +57,10 @@ body {
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    font-size: 4em;
+    font-size: 4em; 
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .operator {
@@ -68,6 +70,9 @@ body {
     width: 100%;
     height: 25%;
     font-size: 4em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
 
 .ac {
@@ -77,4 +82,7 @@ body {
     width: 25%;
     height: 100%;
     font-size: 4em;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
 }
