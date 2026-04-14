@@ -70,8 +70,11 @@ clickables.forEach(e => {
                 opUsed = false;
             }
             if(opUsed == true){
-                displayDiv.textContent = clicked;
-                opUsed = false;
+                if(dotExists)
+                    displayDiv.textContent += clicked;
+                else
+                    displayDiv.textContent = clicked;
+                    opUsed = false;
             }
             else
                 displayDiv.textContent += clicked;
@@ -86,14 +89,23 @@ clickables.forEach(e => {
                 opUsed = false;
             }
             else if(clicked == "." && dotExists == false){
-                if(op != null || displayed){
-                    displayDiv.textContent += clicked;
-                    dotExists = true;
+                if(displayed){
+                    if(!op)
+                        displayDiv.textContent += clicked;               
+                    else if(op == "="){
+                        op = null;
+                        a = null;
+                        b = null;
+                        opUsed = false;
+                        displayDiv.textContent = 0 + clicked;
+                    }
+                    else if(["÷", "x", "-", "+"].includes(op)){
+                        displayDiv.textContent += clicked;
+                    }
                 }
-                else{
-                    displayDiv.textContent = 0 + clicked;
-                    dotExists = true;
-                }
+                else displayDiv.textContent = 0 + clicked;    
+                
+                dotExists = true;
             }
             else if(["÷", "x", "-", "+", "="].includes(clicked) && (opUsed == false || op == "=")){
                 opUsed = true;
